@@ -16,7 +16,7 @@ All endpoints accept GET requests with two query string parameters: `x` and `y`.
 Results are cached for 1 minute.
 
 ## How to run
-TODO
+`go run main.go`
 
 ## Request
 
