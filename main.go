@@ -1,10 +1,11 @@
 package main
 
 import (
-	"go-calculator/calcserver"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/slaven/go-calculator/calcserver"
 )
 
 func main() {
