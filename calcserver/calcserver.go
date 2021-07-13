@@ -2,6 +2,7 @@ package calcserver
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -155,12 +156,20 @@ func getSupportedRoutes() []CalcOperation {
 
 // Get x and y from query parameters
 func getQueryValues(vals url.Values) (float64, float64, error) {
-	x, err := strconv.ParseFloat(vals.Get("x"), 64)
+	valX := vals.Get("x")
+	if valX == "" {
+		return 0, 0, errors.New("value for X parameter is missing")
+	}
+	x, err := strconv.ParseFloat(valX, 64)
 	if err != nil {
 		return 0, 0, err
 	}
 
-	y, err := strconv.ParseFloat(vals.Get("y"), 64)
+	valY := vals.Get("y")
+	if valY == "" {
+		return 0, 0, errors.New("value for Y parameter is missing")
+	}
+	y, err := strconv.ParseFloat(valY, 64)
 	if err != nil {
 		return 0, 0, err
 	}
