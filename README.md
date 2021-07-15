@@ -18,6 +18,9 @@ Results are cached for 1 minute.
 ## How to run
 `go run main.go`
 
+## Run tests with code coverage
+`go test -cover`
+
 ## Request
 
 | Operation      | Example |
@@ -47,10 +50,10 @@ Example:
 ```
 
 ## Dockerize web application
-Run:
 ```
 docker build -t calcserver .
 docker run -p 8080:8080 calcserver
 ```
+
 ## CD/CI pipeline
 TODO
