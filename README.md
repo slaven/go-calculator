@@ -18,8 +18,8 @@ Results are cached for 1 minute.
 ## How to run
 `go run main.go`
 
-## Run tests with code coverage
-`go test -cover`
+## Run tests
+`go test`
 
 ## Request
 

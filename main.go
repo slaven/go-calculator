@@ -40,7 +40,7 @@ func main() {
 	<-ctx.Done()
 
 	// Cancel context for the interrupt signal
-	stop()
+	stop() // todo ??
 	log.Println("[Server] Shutting down gracefully, press Ctrl+C again to force")
 
 	// Perform server shutdown with timeout
