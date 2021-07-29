@@ -49,11 +49,19 @@ Example:
 }
 ```
 
-## Dockerize web application
+# Test with curl
+Request:
+```
+curl "http://localhost:8080/add?x=4&y=3"
+```
+Response:
+```json
+{"action":"add","answer":7,"x":4,"y":3,"cached":true}
+```
+
+# Dockerize web application
 ```
 docker build -t calcserver .
 docker run -p 8080:8080 calcserver
 ```
 
-## CD/CI pipeline
-TODO
